@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="480" viewBox="0 0 480 480">
+  <title>L'or du Kobido – icône fond noir</title>
+  <rect width="480" height="480" rx="8" fill="#111009"/>
+  <circle cx="240" cy="196" r="98" fill="none" stroke="#C9A96E" stroke-width="0.7" opacity="0.38"/>
+  <circle cx="240" cy="196" r="84" fill="none" stroke="#C9A96E" stroke-width="0.35" opacity="0.18"/>
+  <circle cx="240" cy="98" r="7" fill="#C0392B"/>
+  <circle cx="240" cy="98" r="12" fill="none" stroke="#C0392B" stroke-width="0.5" opacity="0.35"/>
+  <path d="M112 204 Q168 184 218 190 Q256 194 338 176" stroke="#9A7A42" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+  <path d="M172 188 Q185 158 200 132" stroke="#7A5F32" stroke-width="0.7" fill="none" stroke-linecap="round"/>
+  <path d="M255 190 Q269 158 284 132" stroke="#7A5F32" stroke-width="0.7" fill="none" stroke-linecap="round"/>
+  <path d="M310 181 Q319 204 324 220" stroke="#7A5F32" stroke-width="0.5" fill="none" stroke-linecap="round"/>
+  <g transform="translate(200,130)">
+    <ellipse cx="0" cy="-10" rx="4.5" ry="10" fill="#D4A84B" opacity="0.88" transform="rotate(0)"/>
+    <ellipse cx="0" cy="-10" rx="4.5" ry="10" fill="#D4A84B" opacity="0.88" transform="rotate(72)"/>
+    <ellipse cx="0" cy="-10" rx="4.5" ry="10" fill="#B8903A" opacity="0.68" transform="rotate(144)"/>
+    <ellipse cx="0" cy="-10" rx="4.5" ry="10" fill="#B8903A" opacity="0.68" transform="rotate(216)"/>
+    <ellipse cx="0" cy="-10" rx="4.5" ry="10" fill="#D4A84B" opacity="0.88" transform="rotate(288)"/>
+    <circle cx="0" cy="0" r="2.5" fill="#F5E080"/>
+    <line x1="0" y1="-2" x2="0" y2="-6" stroke="#F5E080" stroke-width="0.5" opacity="0.8"/>
+    <line x1="2" y1="-1" x2="5" y2="-4" stroke="#F5E080" stroke-width="0.5" opacity="0.8"/>
+    <line x1="-2" y1="-1" x2="-5" y2="-4" stroke="#F5E080" stroke-width="0.5" opacity="0.8"/>
+  </g>
+  <g transform="translate(240,168)">
+    <ellipse cx="0" cy="-13" rx="6" ry="13" fill="#EAC455" opacity="0.95" transform="rotate(0)"/>
+    <ellipse cx="0" cy="-13" rx="6" ry="13" fill="#EAC455" opacity="0.95" transform="rotate(72)"/>
+    <ellipse cx="0" cy="-13" rx="6" ry="13" fill="#D4A84B" opacity="0.75" transform="rotate(144)"/>
+    <ellipse cx="0" cy="-13" rx="6" ry="13" fill="#D4A84B" opacity="0.75" transform="rotate(216)"/>
+    <ellipse cx="0" cy="-13" rx="6" ry="13" fill="#EAC455" opacity="0.95" transform="rotate(288)"/>
+    <circle cx="0" cy="0" r="3" fill="#FBF0A0"/>
+    <line x1="0" y1="-3" x2="0" y2="-8" stroke="#FBF0A0" stroke-width="0.5" opacity="0.9"/>
+    <line x1="3" y1="-1.5" x2="6" y2="-6" stroke="#FBF0A0" stroke-width="0.5" opacity="0.9"/>
+    <line x1="-3" y1="-1.5" x2="-6" y2="-6" stroke="#FBF0A0" stroke-width="0.5" opacity="0.9"/>
+    <line x1="1" y1="2" x2="2" y2="6" stroke="#FBF0A0" stroke-width="0.4" opacity="0.55"/>
+    <line x1="-1" y1="2" x2="-2" y2="6" stroke="#FBF0A0" stroke-width="0.4" opacity="0.55"/>
+  </g>
+  <g transform="translate(284,130)">
+    <ellipse cx="0" cy="-10" rx="4.5" ry="10" fill="#D4A84B" opacity="0.82" transform="rotate(0)"/>
+    <ellipse cx="0" cy="-10" rx="4.5" ry="10" fill="#D4A84B" opacity="0.82" transform="rotate(72)"/>
+    <ellipse cx="0" cy="-10" rx="4.5" ry="10" fill="#B8903A" opacity="0.64" transform="rotate(144)"/>
+    <ellipse cx="0" cy="-10" rx="4.5" ry="10" fill="#B8903A" opacity="0.64" transform="rotate(216)"/>
+    <ellipse cx="0" cy="-10" rx="4.5" ry="10" fill="#D4A84B" opacity="0.82" transform="rotate(288)"/>
+    <circle cx="0" cy="0" r="2.5" fill="#F5E080"/>
+    <line x1="0" y1="-2" x2="0" y2="-6" stroke="#F5E080" stroke-width="0.5" opacity="0.8"/>
+    <line x1="2" y1="-1" x2="5" y2="-4" stroke="#F5E080" stroke-width="0.5" opacity="0.8"/>
+    <line x1="-2" y1="-1" x2="-5" y2="-4" stroke="#F5E080" stroke-width="0.5" opacity="0.8"/>
+  </g>
+  <ellipse cx="324" cy="221" rx="3" ry="7" fill="#C9A96E" opacity="0.4"/>
+  <ellipse cx="216" cy="228" rx="2.5" ry="5" fill="#D4A84B" opacity="0.16" transform="rotate(-28 216 228)"/>
+  <ellipse cx="265" cy="236" rx="2" ry="4" fill="#D4A84B" opacity="0.12" transform="rotate(20 265 236)"/>
+</svg>
