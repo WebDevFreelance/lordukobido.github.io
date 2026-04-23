@@ -722,9 +722,7 @@ a  { color: inherit; text-decoration: none; }
   }
   .footer__inner > nav { order: 2; flex: 1 1 auto; }
   .footer__socials { order: 3; }
-  .footer__address,
-  .footer__copy,
-  .footer__credit { width: 100%; text-align: center; }
+  .footer__copy { order: 4; flex: 0 0 auto; }
 }
 .footer__logo {
   font-family: var(--font-titre);
@@ -1109,25 +1107,6 @@ a  { color: inherit; text-decoration: none; }
   outline-offset: 5px;
 }
 
-/* ── Footer adresse & crédit ── */
-.footer__address {
-  font-style: normal;
-  font-size: 0.75rem;
-  letter-spacing: 0.12em;
-  opacity: 0.4;
-}
-.footer__credit {
-  font-size: 0.68rem;
-  opacity: 0.42;
-  letter-spacing: 0.08em;
-}
-.footer__credit a {
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  text-decoration-color: rgba(255,255,255,0.2);
-  transition: opacity var(--transition);
-}
-.footer__credit a:hover { opacity: 1; }
 
 /* ══════════════════════════════════════════
    ACCESSIBILITÉ — prefers-reduced-motion
@@ -1178,9 +1157,6 @@ a  { color: inherit; text-decoration: none; }
 /* Footer */
 .footer__links a  { opacity: 1; color: rgba(245, 239, 230, 0.68); }
 .footer__copy     { opacity: 1; color: rgba(245, 239, 230, 0.68); font-size: 0.75rem; }
-.footer__address  { opacity: 1; color: rgba(245, 239, 230, 0.68); }
-.footer__credit   { opacity: 1; color: rgba(245, 239, 230, 0.68); }
-.footer__credit a { text-decoration-color: rgba(245, 239, 230, 0.3); }
 
 /* ── Tarifs — helpers styles inline externalisés ── */
 .tarifs__th--right        { text-align: right; }
