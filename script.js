@@ -17,12 +17,14 @@ document.addEventListener('DOMContentLoaded', () => {
   if (burger && links) {
     burger.addEventListener('click', () => {
       const open = links.classList.toggle('open');
+      nav.classList.toggle('menu-open', open);
       burger.setAttribute('aria-expanded', open);
       document.body.style.overflow = open ? 'hidden' : '';
     });
     links.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', () => {
         links.classList.remove('open');
+        nav.classList.remove('menu-open');
         burger.setAttribute('aria-expanded', false);
         document.body.style.overflow = '';
       });

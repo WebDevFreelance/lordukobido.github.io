@@ -131,17 +131,6 @@ a  { color: inherit; text-decoration: none; }
   align-items: center;
   gap: 0.7rem;
 }
-.nav__logo-icon {
-  width: 30px;
-  height: 30px;
-  flex-shrink: 0;
-  opacity: 0.85;
-  transition: opacity var(--transition), transform var(--transition);
-}
-.nav__logo:hover .nav__logo-icon,
-.nav__logo:focus-visible .nav__logo-icon {
-  opacity: 1;
-}
 .nav__logo-text {
   display: flex;
   flex-direction: column;
@@ -816,35 +805,6 @@ a  { color: inherit; text-decoration: none; }
 .reveal-delay-2 { transition-delay: 0.2s; }
 .reveal-delay-3 { transition-delay: 0.3s; }
 
-/* ══════════════════════════════════════════
-   BIENFAITS
-══════════════════════════════════════════ */
-.bienfaits__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0;
-}
-
-.bienfait-item {
-  padding: 2.5rem 2.8rem;
-  border-left: 1px solid rgba(228, 196, 104, 0.12);
-}
-.bienfait-item:nth-child(3n+1) { border-left: none; }
-
-.bienfait-item__titre {
-  font-family: var(--font-titre);
-  font-size: 1.25rem;
-  font-weight: 400;
-  color: var(--or);
-  letter-spacing: 0.04em;
-  margin-bottom: 0.8rem;
-}
-
-.bienfait-item__texte {
-  font-size: 0.88rem;
-  opacity: 0.68;
-  line-height: 1.85;
-}
 
 /* ══════════════════════════════════════════
    SECTION LAURE
@@ -970,41 +930,6 @@ a  { color: inherit; text-decoration: none; }
 }
 
 
-/* ══════════════════════════════════════════
-   RÉASSURANCE
-══════════════════════════════════════════ */
-.reassurance__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2px;
-}
-
-.faq-item {
-  padding: 3rem 2.5rem;
-  border: 1px solid rgba(228, 196, 104, 0.08);
-  background: rgba(228, 196, 104, 0.02);
-  transition: border-color var(--transition);
-}
-
-.faq-item:hover {
-  border-color: rgba(228, 196, 104, 0.2);
-}
-
-.faq-item__question {
-  font-family: var(--font-titre);
-  font-size: 1.2rem;
-  font-weight: 400;
-  color: var(--or);
-  letter-spacing: 0.03em;
-  line-height: 1.35;
-  margin-bottom: 1.2rem;
-}
-
-.faq-item__reponse {
-  font-size: 0.88rem;
-  opacity: 0.68;
-  line-height: 1.88;
-}
 
 /* ── Boutons helpers ── */
 .btn--icon {
@@ -1013,11 +938,6 @@ a  { color: inherit; text-decoration: none; }
   gap: 0.7rem;
 }
 
-.btn--large {
-  padding: 1rem 2.8rem;
-  font-size: 0.82rem;
-  letter-spacing: 0.2em;
-}
 
 .section__cta-inline {
   text-align: center;
@@ -1033,9 +953,6 @@ a  { color: inherit; text-decoration: none; }
   }
   .philosophie__divider { display: none; }
   .philosophie__item { padding: 2rem; }
-  .bienfaits__grid { grid-template-columns: 1fr 1fr; }
-  .bienfait-item:nth-child(3n+1) { border-left: 1px solid rgba(228,196,104,0.12); }
-  .bienfait-item:nth-child(odd) { border-left: none; }
   .section--laure::before {
     width: 220px;
     height: 220px;
@@ -1050,30 +967,37 @@ a  { color: inherit; text-decoration: none; }
   }
   .expertise__layout { grid-template-columns: 1fr; gap: 3.5rem; }
   .expertise__photo { aspect-ratio: 4 / 3; max-width: 480px; }
-  .expertise__photo::before {
-    width: 200px;
-    height: 200px;
-    right: -8%;
-    top: 10%;
-  }
 }
 
-@media (max-width: 400px) {
-  .nav__logo-icon { width: 22px; height: 22px; }
-}
 
 @media (max-width: 680px) {
   .nav__links { display: none; }
   .nav__burger { display: flex; }
 
+  /* Menu ouvert : la nav entière devient l'overlay — évite le fixed dans fixed (iOS Safari) */
+  .nav.menu-open,
+  .nav.scrolled.menu-open {
+    height: 100svh;
+    background: rgba(17,16,10,0.98);
+    backdrop-filter: none;
+    border-bottom: none;
+    padding: 0;
+  }
+  .nav.menu-open .nav__inner {
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 1.25rem;
+    gap: 0;
+  }
   .nav__links.open {
     display: flex;
     flex-direction: column;
-    position: fixed;
-    inset: 0;
-    background: rgba(17,16,10,0.98);
     align-items: center;
     justify-content: center;
+    flex: 1;
+    width: 100%;
     gap: 2.5rem;
   }
   .nav__links.open a { font-size: 1rem; }
@@ -1081,10 +1005,6 @@ a  { color: inherit; text-decoration: none; }
   .section { padding: 5.5rem 0; }
   .prestations__grid { grid-template-columns: 1fr; }
   .forfaits__grid { grid-template-columns: 1fr; }
-  .bienfaits__grid { grid-template-columns: 1fr; }
-  .bienfait-item { border-left: none; border-top: 1px solid rgba(228,196,104,0.12); }
-  .bienfait-item:first-child { border-top: none; }
-  .reassurance__grid { grid-template-columns: 1fr; }
   .contact__actions { flex-direction: column; align-items: center; }
   .contact__btn { width: 100%; max-width: 320px; }
 }
@@ -1220,7 +1140,6 @@ a  { color: inherit; text-decoration: none; }
 .expertise__bio          { opacity: 1; color: rgba(245, 239, 230, 0.80); }
 .rituel__step-texte      { opacity: 1; color: rgba(245, 239, 230, 0.80); }
 .rituel__step-num        { opacity: 1; color: rgba(228, 196, 104, 0.85); }
-.faq-item__reponse       { opacity: 1; color: rgba(245, 239, 230, 0.80); }
 .contact__intro-text     { opacity: 1; color: rgba(245, 239, 230, 0.80); }
 .expertise__citation-auteur { opacity: 1; color: rgba(228, 196, 104, 0.70); }
 .nav__logo-sub           { color: rgba(228, 196, 104, 0.85); }
@@ -1289,21 +1208,15 @@ a  { color: inherit; text-decoration: none; }
 
 /* ── Mobile — masquer SVG décoratifs trop larges ── */
 @media (max-width: 680px) {
-  .hero__deco-cercle,
   #approche > svg[aria-hidden],
-  #laure > svg[aria-hidden],
   #prestations > svg[aria-hidden],
   #tarifs > svg[aria-hidden],
   #contact > svg[aria-hidden] {
     display: none;
   }
-  #approche::before, #laure::before, #tarifs::before,
-  #prestations::before, #rituel::before, #contact::before {
+  #tarifs::before {
     width: 300px; height: 300px;
     right: -180px;
   }
-  #approche::after, #laure::after, #tarifs::after,
-  #prestations::after, #rituel::after, #contact::after {
-    display: none;
-  }
+  #tarifs::after { display: none; }
 }
