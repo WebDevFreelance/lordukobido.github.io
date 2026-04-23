@@ -15,19 +15,36 @@ document.addEventListener('DOMContentLoaded', () => {
   const burger = document.querySelector('.nav__burger');
   const links  = document.querySelector('.nav__links');
   if (burger && links) {
+    const closeMenu = () => {
+      links.classList.remove('open');
+      nav.classList.remove('menu-open');
+      burger.setAttribute('aria-expanded', false);
+      burger.setAttribute('aria-label', 'Menu');
+      document.body.style.overflow = '';
+    };
+
     burger.addEventListener('click', () => {
       const open = links.classList.toggle('open');
       nav.classList.toggle('menu-open', open);
       burger.setAttribute('aria-expanded', open);
+      burger.setAttribute('aria-label', open ? 'Fermer le menu' : 'Menu');
       document.body.style.overflow = open ? 'hidden' : '';
     });
-    links.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        links.classList.remove('open');
-        nav.classList.remove('menu-open');
-        burger.setAttribute('aria-expanded', false);
-        document.body.style.overflow = '';
-      });
+
+    /* Fermer via les liens de nav */
+    links.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+    /* Fermer en cliquant sur le fond de l'overlay (pas sur un lien) */
+    links.addEventListener('click', e => {
+      if (!e.target.closest('a')) closeMenu();
+    });
+
+    /* Fermer avec Echap */
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && nav.classList.contains('menu-open')) {
+        closeMenu();
+        burger.focus();
+      }
     });
   }
 
