@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Lato:wght@300;400;700&display=swap" media="print" onload="this.media='all'" />
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Lato:wght@300;400;700&display=swap" /></noscript>
   <link rel="canonical" href="https://lordukobido.fr/" />
-  <link rel="icon" href="logo_icone_fond_noir.svg" type="image/svg+xml" />
+  <link rel="icon" href="assets/logo_icone_fond_noir.svg" type="image/svg+xml" />
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#11100A" />
@@ -75,7 +75,39 @@
 <nav class="nav" role="navigation" aria-label="Navigation principale">
   <div class="container nav__inner">
     <a href="/" class="nav__logo" aria-label="L'Or du Kobido — Accueil">
-      <svg class="nav__logo-icon" viewBox="0 0 480 480" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+      <span class="nav__logo-text">
+        <span class="nav__logo-name">L'Or du Kobido</span>
+        <span class="nav__logo-sub">Laure Rochat</span>
+      </span>
+    </a>
+
+    <ul class="nav__links" id="nav-links" role="list">
+      <li><a href="#approche">L'approche</a></li>
+      <li><a href="#prestations">Les rituels</a></li>
+      <li><a href="#laure">La praticienne</a></li>
+      <li><a href="#tarifs">Tarifs</a></li>
+      <li><a href="#contact">Rendez-vous</a></li>
+    </ul>
+
+    <button class="nav__burger" aria-controls="nav-links" aria-expanded="false" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<main id="contenu-principal">
+
+<!-- ══ HERO ══════════════════════════════════════ -->
+<section id="accueil" class="hero" aria-label="Accueil">
+
+
+  <div class="hero__bg" aria-hidden="true"></div>
+
+  <div class="hero__content">
+
+    <!-- Logo bijou central -->
+    <div class="hero__logo-grand" aria-hidden="true">
+      <svg class="hero__logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="100 70 280 250" focusable="false" aria-hidden="true">
         <circle cx="240" cy="196" r="98" fill="none" stroke="#C9A96E" stroke-width="3" opacity="0.55"/>
         <circle cx="240" cy="196" r="84" fill="none" stroke="#C9A96E" stroke-width="1.5" opacity="0.22"/>
         <circle cx="240" cy="98" r="9" fill="#C0392B"/>
@@ -108,86 +140,6 @@
           <circle cx="0" cy="0" r="2.5" fill="#F5E080"/>
         </g>
         <ellipse cx="324" cy="221" rx="3" ry="7" fill="#C9A96E" opacity="0.5"/>
-      </svg>
-      <span class="nav__logo-text">
-        <span class="nav__logo-name">L'Or du Kobido</span>
-        <span class="nav__logo-sub">Laure Rochat</span>
-      </span>
-    </a>
-
-    <ul class="nav__links" id="nav-links" role="list">
-      <li><a href="#approche">L'approche</a></li>
-      <li><a href="#prestations">Les rituels</a></li>
-      <li><a href="#laure">La praticienne</a></li>
-      <li><a href="#tarifs">Tarifs</a></li>
-      <li><a href="#contact">Rendez-vous</a></li>
-    </ul>
-
-    <button class="nav__burger" aria-controls="nav-links" aria-expanded="false" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
-
-<main id="contenu-principal">
-
-<!-- ══ HERO ══════════════════════════════════════ -->
-<section id="accueil" class="hero" aria-label="Accueil">
-  <svg class="hero__deco-cercle" aria-hidden="true" focusable="false" viewBox="0 0 700 700" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="350" cy="350" r="308" fill="none" stroke="#C9A96E" stroke-width="1.4" opacity="0.42"/>
-    <circle cx="350" cy="350" r="250" fill="none" stroke="#C9A96E" stroke-width="0.9" opacity="0.26"/>
-  </svg>
-
-  <div class="hero__bg" aria-hidden="true"></div>
-
-  <div class="hero__content">
-
-    <!-- Logo bijou central -->
-    <div class="hero__logo-grand" aria-hidden="true">
-      <svg class="hero__logo-svg" viewBox="0 0 480 480" focusable="false" xmlns="http://www.w3.org/2000/svg">
-        <path d="M112 204 Q168 184 218 190 Q256 194 338 176" stroke="#9A7A42" stroke-width="4" fill="none" stroke-linecap="round"/>
-        <path d="M172 188 Q185 158 200 132" stroke="#7A5F32" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-        <path d="M255 190 Q269 158 284 132" stroke="#7A5F32" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-        <path d="M310 181 Q319 204 324 220" stroke="#7A5F32" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.8"/>
-        <circle cx="240" cy="98" r="9" fill="#C0392B"/>
-        <g transform="translate(200,130)">
-          <ellipse cx="0" cy="-10" rx="4.5" ry="10" fill="#D4A84B" opacity="0.9" transform="rotate(0)"/>
-          <ellipse cx="0" cy="-10" rx="4.5" ry="10" fill="#D4A84B" opacity="0.9" transform="rotate(72)"/>
-          <ellipse cx="0" cy="-10" rx="4.5" ry="10" fill="#B8903A" opacity="0.7" transform="rotate(144)"/>
-          <ellipse cx="0" cy="-10" rx="4.5" ry="10" fill="#B8903A" opacity="0.7" transform="rotate(216)"/>
-          <ellipse cx="0" cy="-10" rx="4.5" ry="10" fill="#D4A84B" opacity="0.9" transform="rotate(288)"/>
-          <circle cx="0" cy="0" r="3" fill="#F5E080"/>
-          <line x1="0" y1="-2" x2="0" y2="-6" stroke="#F5E080" stroke-width="0.5" opacity="0.8"/>
-          <line x1="2" y1="-1" x2="5" y2="-4" stroke="#F5E080" stroke-width="0.5" opacity="0.8"/>
-          <line x1="-2" y1="-1" x2="-5" y2="-4" stroke="#F5E080" stroke-width="0.5" opacity="0.8"/>
-        </g>
-        <g transform="translate(240,168)">
-          <ellipse cx="0" cy="-13" rx="6" ry="13" fill="#EAC455" opacity="0.95" transform="rotate(0)"/>
-          <ellipse cx="0" cy="-13" rx="6" ry="13" fill="#EAC455" opacity="0.95" transform="rotate(72)"/>
-          <ellipse cx="0" cy="-13" rx="6" ry="13" fill="#D4A84B" opacity="0.75" transform="rotate(144)"/>
-          <ellipse cx="0" cy="-13" rx="6" ry="13" fill="#D4A84B" opacity="0.75" transform="rotate(216)"/>
-          <ellipse cx="0" cy="-13" rx="6" ry="13" fill="#EAC455" opacity="0.95" transform="rotate(288)"/>
-          <circle cx="0" cy="0" r="3.5" fill="#FBF0A0"/>
-          <line x1="0" y1="-3" x2="0" y2="-8" stroke="#FBF0A0" stroke-width="0.5" opacity="0.9"/>
-          <line x1="3" y1="-1.5" x2="6" y2="-6" stroke="#FBF0A0" stroke-width="0.5" opacity="0.9"/>
-          <line x1="-3" y1="-1.5" x2="-6" y2="-6" stroke="#FBF0A0" stroke-width="0.5" opacity="0.9"/>
-          <line x1="1" y1="2" x2="2" y2="6" stroke="#FBF0A0" stroke-width="0.4" opacity="0.55"/>
-          <line x1="-1" y1="2" x2="-2" y2="6" stroke="#FBF0A0" stroke-width="0.4" opacity="0.55"/>
-        </g>
-        <g transform="translate(284,130)">
-          <ellipse cx="0" cy="-10" rx="4.5" ry="10" fill="#D4A84B" opacity="0.85" transform="rotate(0)"/>
-          <ellipse cx="0" cy="-10" rx="4.5" ry="10" fill="#D4A84B" opacity="0.85" transform="rotate(72)"/>
-          <ellipse cx="0" cy="-10" rx="4.5" ry="10" fill="#B8903A" opacity="0.65" transform="rotate(144)"/>
-          <ellipse cx="0" cy="-10" rx="4.5" ry="10" fill="#B8903A" opacity="0.65" transform="rotate(216)"/>
-          <ellipse cx="0" cy="-10" rx="4.5" ry="10" fill="#D4A84B" opacity="0.85" transform="rotate(288)"/>
-          <circle cx="0" cy="0" r="2.5" fill="#F5E080"/>
-          <line x1="0" y1="-2" x2="0" y2="-6" stroke="#F5E080" stroke-width="0.5" opacity="0.8"/>
-          <line x1="2" y1="-1" x2="5" y2="-4" stroke="#F5E080" stroke-width="0.5" opacity="0.8"/>
-          <line x1="-2" y1="-1" x2="-5" y2="-4" stroke="#F5E080" stroke-width="0.5" opacity="0.8"/>
-        </g>
-        <ellipse cx="324" cy="221" rx="3" ry="7" fill="#C9A96E" opacity="0.45"/>
-        <ellipse cx="216" cy="228" rx="2.5" ry="5" fill="#D4A84B" opacity="0.14" transform="rotate(-28 216 228)"/>
-        <ellipse cx="265" cy="236" rx="2" ry="4" fill="#D4A84B" opacity="0.1" transform="rotate(20 265 236)"/>
       </svg>
     </div>
 
@@ -377,7 +329,7 @@
 
       <div class="expertise__photo reveal" aria-label="Photo de Laure Rochat">
         <div class="expertise__photo-logo" aria-hidden="true">
-          <img src="logo_icone_fond_noir.svg" alt="" width="120" height="120" loading="lazy" class="expertise__photo-logo-img" />
+          <img src="assets/logo_icone_fond_noir.svg" alt="" width="120" height="120" loading="lazy" class="expertise__photo-logo-img" />
         </div>
       </div>
 
@@ -554,7 +506,7 @@
 <!-- ══ CONTACT ════════════════════════════════════ -->
 <section id="contact" class="section section--creme" aria-labelledby="contact-titre">
   <!-- Deco — grand cercle doré -->
-  <svg aria-hidden="true" focusable="false" style="position:absolute;bottom:-15%;left:50%;transform:translateX(-50%);width:700px;height:700px;pointer-events:none;user-select:none;opacity:0.12" viewBox="0 0 700 700" xmlns="http://www.w3.org/2000/svg">
+  <svg aria-hidden="true" focusable="false" style="position:absolute;bottom:-2.5%;left:50%;transform:translateX(-50%);width:700px;height:700px;pointer-events:none;user-select:none;opacity:0.12" viewBox="0 0 700 700" xmlns="http://www.w3.org/2000/svg">
     <circle cx="350" cy="350" r="320" fill="none" stroke="#C9A96E" stroke-width="1.5"/>
     <circle cx="350" cy="350" r="280" fill="none" stroke="#C9A96E" stroke-width="0.8"/>
     <circle cx="350" cy="350" r="240" fill="none" stroke="#C9A96E" stroke-width="0.5"/>

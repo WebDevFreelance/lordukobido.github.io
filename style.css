@@ -225,32 +225,18 @@ a  { color: inherit; text-decoration: none; }
   padding-top: 80px;
 }
 
-/* Cercle décoratif centré hero */
-.hero__deco-cercle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: min(680px, 92vw);
-  height: min(680px, 92vw);
-  pointer-events: none;
-  user-select: none;
-  opacity: 0.28;
-  z-index: 0;
-}
-
 /* Logo hero — bijou central */
 .hero__logo-grand {
-  width: min(260px, 58vw);
-  margin: 0 auto 3.5rem;
+  width: clamp(320px, 28vw, 460px);
+  margin: 0 auto 2.25rem;
   position: relative;
 }
 .hero__logo-svg {
-  width: 100%;
+  width: 30%;
   height: auto;
   display: block;
-  transition: transform 0.9s cubic-bezier(0.4, 0, 0.2, 1), filter 0.9s ease;
   filter: brightness(1.02);
+  transition: transform var(--transition), filter var(--transition);
 }
 .hero__logo-grand:hover .hero__logo-svg,
 .hero__logo-grand:focus-within .hero__logo-svg {
@@ -333,48 +319,28 @@ a  { color: inherit; text-decoration: none; }
 /* ── Cercles background — sobre, luxe ── */
 
 /* Cercles dorés — sections impaires */
-#approche::before, #laure::before, #tarifs::before {
+#tarifs::before {
   content: '';
   position: absolute;
   width: 560px; height: 560px;
   border-radius: 50%;
-  border: 1px solid rgba(228, 196, 104, 0.12);
+  border: 1px solid rgba(228, 196, 104, 0.20);
   pointer-events: none;
   top: 50%; right: -260px;
   transform: translateY(-50%);
 }
-#approche::after, #laure::after, #tarifs::after {
+
+#tarifs::after {
   content: '';
   position: absolute;
   width: 380px; height: 380px;
   border-radius: 50%;
-  border: 1px solid rgba(228, 196, 104, 0.07);
+  border: 1px solid rgba(228, 196, 104, 0.27);
   pointer-events: none;
   top: 50%; right: -170px;
   transform: translateY(-50%);
 }
 
-/* Cercles vermillon — sections paires */
-#prestations::before, #contact::before {
-  content: '';
-  position: absolute;
-  width: 560px; height: 560px;
-  border-radius: 50%;
-  border: 1px solid rgba(192, 57, 43, 0.12);
-  pointer-events: none;
-  top: 50%; left: -260px;
-  transform: translateY(-50%);
-}
-#prestations::after, #contact::after {
-  content: '';
-  position: absolute;
-  width: 380px; height: 380px;
-  border-radius: 50%;
-  border: 1px solid rgba(192, 57, 43, 0.07);
-  pointer-events: none;
-  top: 50%; left: -170px;
-  transform: translateY(-50%);
-}
 .section--creme {
   background: #1a1812;
 }
@@ -905,7 +871,6 @@ a  { color: inherit; text-decoration: none; }
   width: clamp(420px, 46vw, 620px);
   height: clamp(420px, 46vw, 620px);
   border-radius: 50%;
-  border: 1px solid rgba(228, 196, 104, 0.12);
   top: 50%;
   left: -220px;
   transform: translateY(-50%);
@@ -934,17 +899,7 @@ a  { color: inherit; text-decoration: none; }
   position: relative;
   z-index: 1;
 }
-.expertise__photo::before {
-  content: '';
-  position: absolute;
-  width: clamp(180px, 24vw, 320px);
-  height: clamp(180px, 24vw, 320px);
-  border-radius: 50%;
-  background: rgba(192, 57, 43, 0.28);
-  right: -10%;
-  top: 12%;
-  z-index: 0;
-}
+
 
 .expertise__photo img {
   width: 100%;
@@ -1014,15 +969,6 @@ a  { color: inherit; text-decoration: none; }
   gap: 0.8rem;
 }
 
-.expertise__badge::before {
-  content: '';
-  display: block;
-  width: 18px;
-  height: 1px;
-  background: var(--or);
-  opacity: 0.5;
-  flex-shrink: 0;
-}
 
 /* ══════════════════════════════════════════
    RÉASSURANCE
