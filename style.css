@@ -302,7 +302,7 @@ a  { color: inherit; text-decoration: none; }
 .section {
   padding: 9rem 0;
   position: relative;
-  overflow: clip;
+  overflow: hidden;
 }
 
 /* ── Cercles background — sobre, luxe ── */
@@ -974,7 +974,7 @@ a  { color: inherit; text-decoration: none; }
   .nav__links { display: none; }
   .nav__burger { display: flex; }
 
-  /* Menu ouvert : la nav entière devient l'overlay — évite le fixed dans fixed (iOS Safari) */
+  /* Nav devient l'overlay plein écran — pas de fixed dans fixed (iOS safe) */
   .nav.menu-open,
   .nav.scrolled.menu-open {
     height: 100svh;
@@ -982,25 +982,31 @@ a  { color: inherit; text-decoration: none; }
     backdrop-filter: none;
     border-bottom: none;
     padding: 0;
+    overflow: hidden;
   }
+
+  /* Logo et burger restent visibles au-dessus du menu */
   .nav.menu-open .nav__inner {
-    height: 100%;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding-top: 1.25rem;
-    gap: 0;
+    padding: 1.25rem 0;
+    position: relative;
   }
+  .nav.menu-open .nav__logo,
+  .nav.menu-open .nav__burger {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Liens : absolute dans la nav (pas fixed), centrés sur tout l'écran */
   .nav__links.open {
     display: flex;
     flex-direction: column;
+    position: absolute;
+    inset: 0;
     align-items: center;
     justify-content: center;
-    flex: 1;
-    width: 100%;
     gap: 2.5rem;
   }
-  .nav__links.open a { font-size: 1rem; }
+  .nav__links.open a { font-size: 1rem; opacity: 0.9; }
 
   .section { padding: 5.5rem 0; }
   .prestations__grid { grid-template-columns: 1fr; }
